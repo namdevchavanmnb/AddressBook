@@ -22,6 +22,7 @@ public class AddressBookMain {
 				address.addContact();
 				break;
 			case 2:
+				address.editContact();
 				break;
 			case 3:
 				break;
