@@ -25,6 +25,7 @@ public class AddressBookMain {
 				address.editContact();
 				break;
 			case 3:
+				address.DeleteContact();
 				break;
 			case 4:
 				address.show();

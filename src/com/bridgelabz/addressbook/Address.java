@@ -24,6 +24,12 @@ public class Address {
 
 	}
 	void show() {
+		if(obj.getFirstName()==null){
+			System.out.println("Not Found");
+		}
+		else {
+			
+		
 		System.out.println("Name"+obj.getFirstName());
 		System.out.println("LastName"+obj.getLastName());
 		System.out.println(" City "+obj.getCity() );
@@ -33,7 +39,7 @@ public class Address {
 		System.out.println("EmailID "+obj.getEmailId());
 
 
-
+		}
 	}
 	void editContact() {
 		//Get First Name to Edit the Contact
@@ -60,5 +66,27 @@ public class Address {
 			System.out.println("Enter the EmailId ");
 			obj.setEmailId(sc.next());
 		}
+		}
+		void DeleteContact(){
+			//Get First Name to Edit the Contact
+			System.out.println("Enter the First Name : ");
+			String firstName = sc.next();
+
+			//check if the Given User with First Name
+			if(!firstName.equals(obj.getFirstName())) {
+				System.out.println("The Entered Contact Name is Not Available in Address Book");
+			} else 
+			{
+				obj.setFirstName(null);
+				obj.setLastName(null);
+				obj.setCity(null);
+				obj.setState(null);
+				obj.setZip(null);
+				obj.setPhoneNumber(null);
+				obj.setEmailId(null);
+			}
+		
+			
+		
 	}
 }
