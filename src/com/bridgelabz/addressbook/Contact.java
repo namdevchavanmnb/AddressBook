@@ -56,4 +56,5 @@ public class Contact {
 				+ ", EmailId=" + EmailId + ", city=" + city + ", state=" + state + ", zip=" + zip + "]";
 	}
 	
+	
 }
