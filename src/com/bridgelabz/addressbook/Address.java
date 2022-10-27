@@ -32,5 +32,33 @@ public class Address {
 		System.out.println("PhoneNumber"+obj.getPhoneNumber());
 		System.out.println("EmailID "+obj.getEmailId());
 
+
+
+	}
+	void editContact() {
+		//Get First Name to Edit the Contact
+		System.out.println("Enter the First Name : ");
+		String firstName = sc.next();
+
+		//check if the Given User with First Name
+		if(!firstName.equals(obj.getFirstName())) {
+			System.out.println("The Entered Contact Name is Not Available in Address Book");
+		} else 
+		{
+			System.out.println("Enter The First Name");
+			obj.setFirstName(sc.next());
+			System.out.println("Enter The Last Name");
+			obj.setLastName(sc.next());
+			System.out.println("Enter the city ");
+			obj.setCity(sc.next());
+			System.out.println("Enter the state ");
+			obj.setState(sc.next());
+			System.out.println("Enter the Zip ");
+			obj.setZip(sc.next());
+			System.out.println("Enter the PhoneNumber ");
+			obj.setPhoneNumber(sc.next());
+			System.out.println("Enter the EmailId ");
+			obj.setEmailId(sc.next());
+		}
 	}
 }
