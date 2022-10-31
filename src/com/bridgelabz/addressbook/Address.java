@@ -1,11 +1,13 @@
 package com.bridgelabz.addressbook;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Address {
 	Contact obj =new Contact();
 	Scanner sc=new Scanner(System.in);
+	ArrayList<Contact> ContactList = new ArrayList<>();
 	void addContact() {
 		System.out.println("Enter The First Name");
 		obj.setFirstName(sc.next());
@@ -21,23 +23,15 @@ public class Address {
 		obj.setPhoneNumber(sc.next());
 		System.out.println("Enter the EmailId ");
 		obj.setEmailId(sc.next());
-
+		ContactList.add(obj);
 	}
 	void show() {
 		if(obj.getFirstName()==null){
 			System.out.println("Not Found");
 		}
 		else {
-			
-		
-		System.out.println("Name"+obj.getFirstName());
-		System.out.println("LastName"+obj.getLastName());
-		System.out.println(" City "+obj.getCity() );
-		System.out.println("state "+obj.getState());
-		System.out.println("Zip "+obj.getZip());
-		System.out.println("PhoneNumber"+obj.getPhoneNumber());
-		System.out.println("EmailID "+obj.getEmailId());
 
+			System.out.println(ContactList.toString());
 
 		}
 	}
@@ -66,27 +60,35 @@ public class Address {
 			System.out.println("Enter the EmailId ");
 			obj.setEmailId(sc.next());
 		}
-		}
-		void DeleteContact(){
-			//Get First Name to Edit the Contact
-			System.out.println("Enter the First Name : ");
-			String firstName = sc.next();
-
-			//check if the Given User with First Name
-			if(!firstName.equals(obj.getFirstName())) {
-				System.out.println("The Entered Contact Name is Not Available in Address Book");
-			} else 
-			{
-				obj.setFirstName(null);
-				obj.setLastName(null);
-				obj.setCity(null);
-				obj.setState(null);
-				obj.setZip(null);
-				obj.setPhoneNumber(null);
-				obj.setEmailId(null);
-			}
-		
-			
-		
 	}
+	void DeleteContact(){
+		//Get First Name to Edit the Contact
+		System.out.println("Enter the First Name : ");
+		String firstName = sc.next();
+
+		//check if the Given User with First Name
+		if(!firstName.equals(obj.getFirstName())) {
+			System.out.println("The Entered Contact Name is Not Available in Address Book");
+		} else 
+		{
+			obj.setFirstName(null);
+			obj.setLastName(null);
+			obj.setCity(null);
+			obj.setState(null);
+			obj.setZip(null);
+			obj.setPhoneNumber(null);
+			obj.setEmailId(null);
+		}
+	}
+
+
+	//	//		public void addMultiplePersons() {
+	//				System.out.println("Enter how many contacts you want to add :- ");
+	//				String Contact = sc.next();
+	//				for (int i = 1; i<=Contact ; i++) {
+	//					addContact();
+	//		
+	//	}
 }
+
+
